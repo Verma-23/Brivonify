@@ -1,0 +1,55 @@
+.navbar.universalMain{
+    justify-content: center;
+}
+
+.universalNavBar{
+    display: flex;
+    width: 85%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-nav.navListItems{
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.searchBar{
+    max-height: 26px;
+}
+.searchInput{
+    display: flex;
+    align-items: center;
+    background-color: #F5F5F5;
+    padding-top: 0.5rem;
+    padding-right: 0.9rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0.9rem;
+}
+
+.searchInput input{
+    font-size: 10px;
+    border: none;
+    background-color: transparent;
+    padding: 0;
+    
+}
+
+.searchInput img{
+    width: 8px;
+    height: 8px;
+    margin: 0px 0px 0px 8px;
+}
+
+.navBarListSection{
+    min-width: 360px
+}
+
+.excLogo h3{
+    margin: 0;
+    font-size: 24px;
+    padding-top: 0.5rem;
+    padding-right: 0px;
+    padding-bottom: 0.5rem;
+    padding-left: 0px;
+}

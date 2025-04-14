@@ -1,9 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
+import PromotionalBar from './Components/PromotionalBar/PromotionalBar';
+import NavUniversal from './Components/NavUniversal/NavUniversal';
 
 function App() {
   return (
     <div className="App">
+      {/* Promotional Bar Component  */}
+      <PromotionalBar/>
+
+      {/* Main NavBar Component  */}
+      <NavUniversal/>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
