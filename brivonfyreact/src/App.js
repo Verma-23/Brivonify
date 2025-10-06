@@ -1,20 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
-import Header from './Components/Header/Header';
-import Hero from './Components/Hero/Hero';
-import ContentSection from './Components/ContentSection/ContentSection';
-import Footer from './Components/Footer/Footer';
+import HomePage from './Pages/HomePage';
+import NewsDetails from './Components/NewsDetails/NewsDetails';
 
 function App() {
-  const [activeSection, setActiveSection] = useState('News');
-
   return (
-    <div className="App">
-      <Header activeSection={activeSection} setActiveSection={setActiveSection} />
-      <Hero />
-      <ContentSection activeSection={activeSection} />
-      <Footer />
-    </div>
+    <Router>
+      <div className="App">
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/news/:id" element={<NewsDetails />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

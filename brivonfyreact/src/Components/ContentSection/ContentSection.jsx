@@ -1,7 +1,9 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './ContentSection.css';
 
 const ContentSection = ({ activeSection }) => {
+  const navigate = useNavigate();
   const newsArticles = [
     {
       id: 1,
@@ -154,7 +156,12 @@ const ContentSection = ({ activeSection }) => {
                   <span className="author">{article.author}</span>
                   <span className="date">{article.date}</span>
                 </div>
-                <button className="read-more">Read More</button>
+                <button
+                  className="read-more"
+                  onClick={() => navigate(`/news/${article.id}`)}
+                >
+                  Read More
+                </button>
               </div>
             ))}
           </div>
