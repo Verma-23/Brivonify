@@ -1,30 +1,19 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.css';
-import PromotionalBar from './Components/PromotionalBar/PromotionalBar';
-import NavUniversal from './Components/NavUniversal/NavUniversal';
+import Header from './Components/Header/Header';
+import Hero from './Components/Hero/Hero';
+import ContentSection from './Components/ContentSection/ContentSection';
+import Footer from './Components/Footer/Footer';
 
 function App() {
+  const [activeSection, setActiveSection] = useState('News');
+
   return (
     <div className="App">
-      {/* Promotional Bar Component  */}
-      <PromotionalBar/>
-
-      {/* Main NavBar Component  */}
-      <NavUniversal/>
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header activeSection={activeSection} setActiveSection={setActiveSection} />
+      <Hero />
+      <ContentSection activeSection={activeSection} />
+      <Footer />
     </div>
   );
 }
